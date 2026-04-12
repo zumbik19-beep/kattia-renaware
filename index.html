@@ -1,0 +1,80 @@
+export default function RenaWareLanding() {
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {promos.map((item) => (
+              <article key={item.title} className="overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-slate-200">
+                <div className="relative">
+                  <img src={item.image} alt={item.title} className="h-[420px] w-full object-cover object-top" />
+                  <div className="absolute left-4 top-4 rounded-full bg-slate-900 px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white">
+                    {item.badge}
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold leading-7">{item.title}</h3>
+                  <p className="mt-3 min-h-[84px] leading-7 text-slate-600">{item.subtitle}</p>
+                  <a
+                    href={messageFor(item.title)}
+                    className="mt-5 inline-flex rounded-2xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white"
+                  >
+                    {item.cta}
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-slate-900 text-white">
+          <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 md:py-20">
+            <div className="flex flex-col justify-center">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">Agua filtrada en casa</p>
+              <h2 className="mt-3 text-3xl font-bold md:text-5xl">También dejamos espacio para vender soluciones de agua y ampliar tus oportunidades.</h2>
+              <p className="mt-5 leading-8 text-slate-300">
+                Esto te ayuda a no depender solo de ollas y juegos de cocina. Así podés captar otro tipo de cliente con otra necesidad.
+              </p>
+              <a
+                href={messageFor("Aqua CHEK Nano CTU-500 + botella filtrante")}
+                className="mt-8 inline-flex w-fit rounded-2xl bg-white px-6 py-4 text-sm font-semibold text-slate-900"
+              >
+                Quiero información del sistema de agua
+              </a>
+            </div>
+            <div className="grid gap-4">
+              <img src={waterBanner} alt="Soluciones de agua Rena Ware" className="w-full rounded-[2rem] object-cover shadow-lg" />
+              <img src={promos[3].image} alt={promos[3].title} className="w-full rounded-[2rem] object-cover shadow-lg ring-1 ring-white/10" />
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
+          <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-8 md:p-12">
+            <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Cierre de venta</p>
+                <h2 className="mt-3 text-3xl font-bold md:text-5xl">¿Cuál promoción te interesa más?</h2>
+                <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+                  Escribime por WhatsApp y te ayudo a elegir la mejor opción según tu cocina, tu presupuesto y lo que realmente querés comprar hoy.
+                </p>
+              </div>
+              <a
+                href={messageFor("asesoría personalizada")}
+                className="inline-flex rounded-2xl bg-slate-900 px-8 py-4 text-sm font-semibold text-white shadow-lg"
+              >
+                Hablar con Kattia ahora
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-slate-200 bg-white">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-10 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="text-sm font-semibold">Kattia Zumbado Espinoza — Asesora autorizada de productos Rena Ware</p>
+            <p className="mt-1 text-sm text-slate-500">WhatsApp: 85305444 · Costa Rica</p>
+          </div>
+          <div className="text-sm text-slate-500">Página diseñada para captación, confianza y conversión.</div>
+        </div>
+      </footer>
+    </div>
+  );
+}
